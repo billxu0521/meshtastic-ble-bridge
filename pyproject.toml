@@ -1,0 +1,18 @@
+[project]
+name = "meshtastic-ble-bridge"
+version = "0.1.0"
+description = "Meshtastic BLE-to-TCP bridge for meshmonitor"
+requires-python = ">=3.9"
+dependencies = [
+    "bleak>=0.22.0",
+]
+
+[project.scripts]
+ble-bridge = "ble_tcp_bridge:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["bridge"]
